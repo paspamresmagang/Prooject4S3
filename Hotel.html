@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>travel.okey</title>
+    <link href="project1.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-container input[type="text"] {
+            padding: 6px;
+            margin-right: 6px;
+            font-size: 17px;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .search-container button {
+            padding: 6px 10px;
+            background-color: rgb(200, 169, 32);
+            color: rgb(53, 50, 50);
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .search-container button:hover {
+            background-color: white;
+        }
+
+        .kadena__hotel {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .hotel-card {
+            width: calc(33.33% - 20px); /* Mengatur lebar kartu hotel dan margin */
+            margin-bottom: 5px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .hotel-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .hotel-info {
+            padding: 20px;
+        }
+
+        .hotel-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: var(--body-color);
+        }
+
+        .hotel-stars {
+            font-size: 14px;
+            color: #f39c12; 
+            margin-bottom: 5px;
+        }
+
+        .hotel-loc {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            color: rgb(53, 50, 50);
+        }
+
+        .hotel-price {
+            font-size: 18px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .home__bg {
+            width: 1800px;
+            height: auto;
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        .home__container {
+            margin-top: 50px;
+        }
+        
+        .section__jawabarat{
+            margin: 0;
+            padding: 0;
+        }
+
+        .section{
+            margin-bottom: 0;
+        }
+
+        .hotel-card {
+            object-fit: cover;
+            transition: transform .5s; /* Menambahkan efek transisi */
+        }
+
+        .hotel-card:hover  {
+            transform: scale(1.1); /* Membesarkan gambar saat di-hover */
+        }
+
+     
+    </style>
+</head>
+
+<body>
+    <header class="header blur-header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                Hotel Travel
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <div class="search-container">
+                        <input type="text" placeholder="Search" name="search">
+                        <button type="submit">Search</button>
+                    </div>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </nav>
+    </header>
+
+        <section class="home section" id="home">
+            <img src="background.jpg" alt="home images" class="home__bg">
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <h1 class="home__subtitle">
+                        <b>Welcome to Hotel</b>
+                    </h1>
+                    <h1 class="home__title">
+                        <b>
+                            Explore
+                            <br>
+                            the Island of Java
+
+                        </b>
+                    </h1>
+                    <p class="home__description">  
+                        Take a journey through the island of Java, discover beaches, islands,
+                        mountains, and much more. Get your trip now
+                    </p>
+                </div>
+            </div>
+        </section>
+    
+
+        <section class="section">
+            <div class="home__container container grid kadena__hotel"> <!-- Perubahan nama kelas disesuaikan dengan CSS -->
+                <div class="hotel-card">
+                    <a href="" class="button__klik">
+                    <img class="hotel-img" src="kadena.jpg" alt="Hotel Image">
+                    <div class="hotel-info">
+                        <div class="hotel-name">Kadena Glamping Dive Resort</div> 
+                        <div class="hotel-loc">Banten</div>
+                        <div class="hotel-stars">★★★★★</div>
+                        <div class="hotel-price">Rp 1.000.000,- / malam</div>
+                    </div>
+                </a>
+                </div>
+
+                <div class="hotel-card">
+                    <a href="" class="button__klik">
+                    <img class="hotel-img" src="Anyer hotel.jpg" alt="Hotel Image">
+                    <div class="hotel-info">
+                        <div class="hotel-name">Anyer Max Hotel</div>
+                        <div class="hotel-loc">Anyer</div>
+                        <div class="hotel-stars">★★★★</div>
+                        <div class="hotel-price">Rp 800.000,- / malam</div>
+                    </div>
+                </a>
+                </div>
+
+                <div class="hotel-card">
+                    <a href="" class="button__klik">
+                    <img class="hotel-img" src="Anyer.jpg" alt="Hotel Image">
+                    <div class="hotel-info">
+                        <div class="hotel-name">Anyer Beach Hotel</div>
+                        <div class="hotel-loc">Anyer</div>
+                        <div class="hotel-stars">★★★★★</div>
+                        <div class="hotel-price">Rp 1.500.000,- / malam</div>
+                    </div>
+                </a>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="section __jawabarat">
+            <div class="home__container container grid kadena__hotel"> <!-- Perubahan nama kelas disesuaikan dengan CSS -->
+                <div class="hotel-card">
+                    <a href="" class="button__klik"></a>
+                    <img class="hotel-img" src="hilton.jpg" alt="Hotel Image">
+                    <div class="hotel-info">
+                        <div class="hotel-name">Hilton Hotel</div> 
+                        <div class="hotel-loc">Bandung</div>
+                        <div class="hotel-stars">★★★★</div>
+                        <div class="hotel-price">Rp 1.080.000,- / malam</div>
+                    </div>
+                </a>
+                </div>
+
+                <div class="hotel-card">
+                    <a href="" class="button__klik">
+                    <img class="hotel-img" src="padma.jpg" alt="Hotel Image">
+                    <div class="hotel-info">
+                        <div class="hotel-name">Padma Hotel</div>
+                        <div class="hotel-loc">Bandung</div>
+                        <div class="hotel-stars">★★★★★</div>
+                        <div class="hotel-price">Rp 1.900.000,- / malam</div>
+                    </div>
+                </a>
+                </div>
+
+                <div class="hotel-card">
+                    <a href="" class="button__klik">
+                    <img class="hotel-img" src="Art Deco.jpg" alt="Hotel Image">
+                    <div class="hotel-info">
+                        <div class="hotel-name">Art Deco Hotel</div>
+                        <div class="hotel-loc">Bandung</div>
+                        <div class="hotel-stars">★★★★</div>
+                        <div class="hotel-price">Rp 750.000,- / malam</div>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="section __jawabarat">
+            <div class="home__container container grid kadena__hotel"> <!-- Perubahan nama kelas disesuaikan dengan CSS -->
+                <div class="hotel-card">
+                    <a href="" class="button__klik"></a>
+                    <img class="hotel-img" src="hilton.jpg" alt="Hotel Image">
+                    <div class="hotel-info">
+                        <div class="hotel-name">Hilton Hotel</div> 
+                        <div class="hotel-loc">Bandung</div>
+                        <div class="hotel-stars">★★★★</div>
+                        <div class="hotel-price">Rp 1.080.000,- / malam</div>
+                    </div>
+                </a>
+                </div>
+
+                <div class="hotel-card">
+                    <a href="" class="button__klik">
+                    <img class="hotel-img" src="padma.jpg" alt="Hotel Image">
+                    <div class="hotel-info">
+                        <div class="hotel-name">Padma Hotel</div>
+                        <div class="hotel-loc">Bandung</div>
+                        <div class="hotel-stars">★★★★★</div>
+                        <div class="hotel-price">Rp 1.900.000,- / malam</div>
+                    </div>
+                </a>
+                </div>
+
+                <div class="hotel-card">
+                    <a href="" class="button__klik">
+                    <img class="hotel-img" src="Art Deco.jpg" alt="Hotel Image">
+                    <div class="hotel-info">
+                        <div class="hotel-name">Art Deco Hotel</div>
+                        <div class="hotel-loc">Bandung</div>
+                        <div class="hotel-stars">★★★★</div>
+                        <div class="hotel-price">Rp 750.000,- / malam</div>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="section __jawabarat">
+            <div class="home__container container grid kadena__hotel"> <!-- Perubahan nama kelas disesuaikan dengan CSS -->
+                <div class="hotel-card">
+                    <a href="" class="button__klik"></a>
+                    <img class="hotel-img" src="hilton.jpg" alt="Hotel Image">
+                    <div class="hotel-info">
+                        <div class="hotel-name">Hilton Hotel</div> 
+                        <div class="hotel-loc">Bandung</div>
+                        <div class="hotel-stars">★★★★</div>
+                        <div class="hotel-price">Rp 1.080.000,- / malam</div>
+                    </div>
+                </a>
+                </div>
+
+                <div class="hotel-card">
+                    <a href="" class="button__klik">
+                    <img class="hotel-img" src="padma.jpg" alt="Hotel Image">
+                    <div class="hotel-info">
+                        <div class="hotel-name">Padma Hotel</div>
+                        <div class="hotel-loc">Bandung</div>
+                        <div class="hotel-stars">★★★★★</div>
+                        <div class="hotel-price">Rp 1.900.000,- / malam</div>
+                    </div>
+                </a>
+                </div>
+
+                <div class="hotel-card">
+                    <a href="" class="button__klik">
+                    <img class="hotel-img" src="Art Deco.jpg" alt="Hotel Image">
+                    <div class="hotel-info">
+                        <div class="hotel-name">Art Deco Hotel</div>
+                        <div class="hotel-loc">Bandung</div>
+                        <div class="hotel-stars">★★★★</div>
+                        <div class="hotel-price">Rp 750.000,- / malam</div>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </section>
+    
+</body>
+
+</html>
